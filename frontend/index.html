@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+<div class="nav-left">
+
+<a href="index.html">Home</a>
+
+<a href="#quiz">Quizzes</a>
+
+<a href="#leaderboard">Leaderboard</a>
+
+<a href="#about">About</a>
+
+</div>
+
+<div class="nav-right">
+
+<a href="login.html">Login</a>
+
+<a href="register.html">Register</a>
+
+<a href="leaderboard.html">Leaderboard</a>
+
+</div>
+
+</header>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>QuizMaster</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+
+            <a href="#quiz">Quizzes</a>
+
+            <a href="#leaderboard">Leaderboard</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="buttons">
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <a href="register.html" class="register-btn">Register</a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>Practice. Learn. Improve.</h1>
+
+            <p>
+
+                QuizMaster is an online quiz platform where students can purchase quizzes,
+                test their knowledge, view results, and compare scores through a leaderboard.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="register.html" class="primary-btn">Get Started</a>
+
+                <a href="#quiz" class="secondary-btn">Browse Quizzes</a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img src="images/hero.png" alt="Quiz">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= QUIZZES ================= -->
+
+    <section class="quiz-section" id="quiz">
+
+        <h2>Available Quizzes</h2>
+
+        <div class="quiz-container">
+
+            <div class="quiz-card">
+
+                <img src="images/java.png">
+
+                <h3>Java</h3>
+
+                <p>Core Java concepts and interview questions.</p>
+
+                <h4>₹99</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <img src="images/python.png">
+
+                <h3>Python</h3>
+
+                <p>Python fundamentals with MCQ practice.</p>
+
+                <h4>₹99</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <img src="images/mysql.png">
+
+                <h3>MySQL</h3>
+
+                <p>SQL queries, joins, functions and practice.</p>
+
+                <h4>₹99</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <img src="images/spring.png">
+
+                <h3>Spring Boot</h3>
+
+                <p>Spring Boot basics and REST API quiz.</p>
+
+                <h4>₹149</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <img src="images/javascript.png">
+
+                <h3>JavaScript</h3>
+
+                <p>JavaScript concepts and coding MCQs.</p>
+
+                <h4>₹99</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+            <div class="quiz-card">
+
+                <img src="images/aptitude.png">
+
+                <h3>Aptitude</h3>
+
+                <p>Quantitative aptitude practice questions.</p>
+
+                <h4>₹79</h4>
+
+                <button>Buy Quiz</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <h2>Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h3>Purchase Quiz</h3>
+
+                <p>Purchase quizzes securely before attempting them.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Timed Quiz</h3>
+
+                <p>Each quiz includes a countdown timer.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Instant Result</h3>
+
+                <p>See your score immediately after submission.</p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-ranking-star"></i>
+
+                <h3>Leaderboard</h3>
+
+                <p>Top scorers are displayed automatically.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= LEADERBOARD ================= -->
+
+    <section class="leaderboard" id="leaderboard">
+
+        <h2>Top Performers</h2>
+
+        <p>
+
+            The leaderboard updates automatically after every completed quiz.
+
+        </p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Rank</th>
+
+                    <th>Student</th>
+
+                    <th>Quiz</th>
+
+                    <th>Score</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="leaderboardBody">
+
+                <tr>
+
+                    <td colspan="4">
+
+                        Loading leaderboard...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2>About QuizMaster</h2>
+
+        <p>
+
+            QuizMaster is a simple online quiz application developed using
+            HTML, CSS, JavaScript, Spring Boot and MySQL.
+
+            Students can register, purchase quizzes, attempt questions,
+            check results and view rankings.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact</h2>
+
+        <p>Email : support@quizmaster.com</p>
+
+        <p>Phone : +91 9876543210</p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 QuizMaster | Developed using HTML, CSS, JavaScript,
+            Spring Boot and MySQL.
+
+        </p>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Result</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+<div class="nav-left">
+
+<a href="index.html">Home</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="leaderboard.html">Leaderboard</a>
+
+</div>
+
+<div class="nav-right">
+
+<a href="#" id="logoutBtn">Logout</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Quiz Completed 🎉</h1>
+
+<hr>
+
+<h2 id="studentName"></h2>
+
+<p>
+
+Quiz :
+
+<span id="quizName"></span>
+
+</p>
+
+<p>
+
+Score :
+
+<span id="score"></span>
+
+</p>
+
+<p>
+
+Percentage :
+
+<span id="percentage"></span>
+
+</p>
+
+<br>
+
+<button onclick="window.location.href='leaderboard.html'">
+
+View Leaderboard
+
+</button>
+
+<br><br>
+
+<button onclick="window.location.href='dashboard.html'">
+
+Back To Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/result.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+
+</html>

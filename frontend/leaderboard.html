@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leaderboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+<div class="nav-left">
+
+<a href="index.html">Home</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="leaderboard.html">Leaderboard</a>
+
+</div>
+
+<div class="nav-right">
+
+<a href="#" id="logoutBtn">Logout</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🏆 Leaderboard</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Rank</th>
+
+<th>Name</th>
+
+<th>Score</th>
+
+<th>Percentage</th>
+
+</tr>
+
+</thead>
+
+<tbody id="leaderboardBody">
+
+</tbody>
+
+</table>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+
+Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/leaderboard.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+
+</html>
