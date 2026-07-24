@@ -1,6 +1,7 @@
 com\quizmaster\service\QuizService.class
 com\quizmaster\dto\LoginRequest.class
 com\quizmaster\repository\QuizRepository.class
+com\quizmaster\repository\PurchaseRepository.class
 com\quizmaster\entity\Quiz.class
 com\quizmaster\service\implementation\UserServiceImpl.class
 com\quizmaster\entity\Question.class
@@ -18,6 +19,7 @@ com\quizmaster\repository\ResultRepository.class
 com\quizmaster\repository\UserRepository.class
 com\quizmaster\config\WebConfig$1.class
 com\quizmaster\repository\QuestionRepository.class
+com\quizmaster\entity\Purchase.class
 com\quizmaster\service\implementation\ResultServiceImpl.class
 com\quizmaster\controller\AuthController.class
 com\quizmaster\controller\QuizController.class

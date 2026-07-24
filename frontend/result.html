@@ -2,96 +2,76 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Quiz Result</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result | QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
     <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="nav-left">
+    <div class="container">
+        <div class="result-card" style="max-width: 550px; width: 100%;">
+            
+            <div style="font-size: 50px; color: #10b981; margin-bottom: 15px;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
 
-<a href="index.html">Home</a>
+            <h1 style="color: #0f172a; margin-bottom: 5px;">Assessment Completed!</h1>
+            <p style="color: #64748b; margin-bottom: 25px;">Here is your performance summary for this attempt.</p>
 
-<a href="dashboard.html">Dashboard</a>
+            <div style="background: #f8fafc; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; margin-bottom: 30px; text-align: left;">
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e2e8f0;">
+                    <span style="color: #64748b;"><i class="fa-solid fa-user"></i> Username:</span>
+                    <strong id="resUsername" style="color: #0f172a;">--</strong>
+                </div>
 
-<a href="leaderboard.html">Leaderboard</a>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e2e8f0;">
+                    <span style="color: #64748b;"><i class="fa-solid fa-book-open"></i> Quiz Name:</span>
+                    <strong id="resQuizName" style="color: #0f172a;">--</strong>
+                </div>
 
-</div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e2e8f0;">
+                    <span style="color: #64748b;"><i class="fa-solid fa-bullseye"></i> Score Obtained:</span>
+                    <strong id="resScore" style="color: #2563eb;">--</strong>
+                </div>
 
-<div class="nav-right">
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e2e8f0;">
+                    <span style="color: #64748b;"><i class="fa-solid fa-percent"></i> Percentage:</span>
+                    <strong id="resPercentage" style="color: #10b981;">--</strong>
+                </div>
 
-<a href="#" id="logoutBtn">Logout</a>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                    <span style="color: #64748b;"><i class="fa-solid fa-trophy"></i> Global Rank:</span>
+                    <strong id="resRank" style="color: #eab308;">#--</strong>
+                </div>
+            </div>
 
-</div>
+            <!-- Buttons -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                <a href="index.html" class="secondary-btn" style="padding: 10px; font-size: 14px; text-align: center;">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+                <a href="dashboard.html" class="primary-btn" style="padding: 10px; font-size: 14px; text-align: center;">
+                    <i class="fa-solid fa-table-columns"></i> Dashboard
+                </a>
+                <a href="leaderboard.html" class="secondary-btn" style="padding: 10px; font-size: 14px; text-align: center; border-color: #eab308; color: #d97706;">
+                    <i class="fa-solid fa-award"></i> Ranks
+                </a>
+            </div>
 
-</header>
+        </div>
+    </div>
 
-<div class="container">
-
-<div class="card">
-
-<h1>Quiz Completed 🎉</h1>
-
-<hr>
-
-<h2 id="studentName"></h2>
-
-<p>
-
-Quiz :
-
-<span id="quizName"></span>
-
-</p>
-
-<p>
-
-Score :
-
-<span id="score"></span>
-
-</p>
-
-<p>
-
-Percentage :
-
-<span id="percentage"></span>
-
-</p>
-
-<br>
-
-<button onclick="window.location.href='leaderboard.html'">
-
-View Leaderboard
-
-</button>
-
-<br><br>
-
-<button onclick="window.location.href='dashboard.html'">
-
-Back To Dashboard
-
-</button>
-
-</div>
-
-</div>
-
-<script src="js/result.js"></script>
-<script src="js/common.js"></script>
-
+    <script src="js/common.js"></script>
+    <script src="js/result.js"></script>
 </body>
 
 </html>

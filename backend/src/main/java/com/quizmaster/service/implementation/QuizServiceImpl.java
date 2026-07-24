@@ -57,4 +57,23 @@ public class QuizServiceImpl implements QuizService {
 
     }
 
+    @Override
+    public Quiz getQuizById(Long id) {
+
+        return quizRepository.findById(id).orElse(null);
+
+    }
+
+    @Override
+    public void deleteQuiz(Long id) {
+        List<Question> questions = questionRepository.findByQuizId(id);
+        questionRepository.deleteAll(questions);
+        quizRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteQuestion(Long questionId) {
+        questionRepository.deleteById(questionId);
+    }
+
 }

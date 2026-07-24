@@ -49,28 +49,47 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
-public List<Result> leaderboard() {
+    public List<Result> leaderboard() {
 
-    List<Result> allResults = resultRepository.findAllByOrderByPercentageDescScoreDesc();
+        List<Result> allResults = resultRepository.findAllByOrderByPercentageDescScoreDesc();
 
-    List<Result> leaderboard = new ArrayList<>();
+        List<Result> leaderboard = new ArrayList<>();
 
-    Set<String> emails = new HashSet<>();
+        Set<String> emails = new HashSet<>();
 
-    for (Result result : allResults) {
+        for (Result result : allResults) {
 
-        if (!emails.contains(result.getEmail())) {
+            if (!emails.contains(result.getEmail())) {
 
-            leaderboard.add(result);
+                leaderboard.add(result);
 
-            emails.add(result.getEmail());
+                emails.add(result.getEmail());
+
+            }
 
         }
 
+        return leaderboard;
+
     }
 
-    return leaderboard;
+    @Override
+    public List<Result> getTop5Performers() {
+        List<Result> fullLeaderboard = leaderboard();
+        if (fullLeaderboard.size() > 5) {
+            return fullLeaderboard.subList(0, 5);
+        }
+        return fullLeaderboard;
+    }
 
-}
+    @Override
+    public List<Result> getAllResults() {
+        return resultRepository.findAllByOrderByPercentageDescScoreDesc();
+    }
+
+    @Override
+    public List<Result> getUserResults(String email) {
+        return resultRepository.findByEmail(email);
+    }
 
 }

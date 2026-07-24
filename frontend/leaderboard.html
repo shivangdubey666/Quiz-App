@@ -2,84 +2,65 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Leaderboard</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Leaderboard | QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
     <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="nav-left">
+    <div style="padding: 100px 8% 40px 8%; max-width: 1100px; margin: auto;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <i class="fa-solid fa-trophy" style="font-size: 48px; color: #eab308;"></i>
+            <h1 style="font-size: 36px; color: #0f172a; margin-top: 10px;">Global Leaderboard</h1>
+            <p style="color: #64748b; font-size: 16px;">Top performing students ranked by best percentage & score</p>
+        </div>
 
-<a href="index.html">Home</a>
+        <div style="background: white; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); overflow: hidden; border: 1px solid #e2e8f0;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Student Username</th>
+                        <th>Quiz Name</th>
+                        <th>Score</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <tr>
+                        <td colspan="5" style="text-align:center; padding: 40px;">
+                            <i class="fa-solid fa-spinner fa-spin" style="font-size: 28px; color: #2563eb;"></i>
+                            <p style="margin-top: 10px; color: #64748b;">Loading leaderboard rankings...</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-<a href="dashboard.html">Dashboard</a>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="dashboard.html" class="primary-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
 
-<a href="leaderboard.html">Leaderboard</a>
+    </div>
 
-</div>
+    <footer>
+        <p>© 2026 QuizMaster | Placement Assessment Platform</p>
+    </footer>
 
-<div class="nav-right">
-
-<a href="#" id="logoutBtn">Logout</a>
-
-</div>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h1>🏆 Leaderboard</h1>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Rank</th>
-
-<th>Name</th>
-
-<th>Score</th>
-
-<th>Percentage</th>
-
-</tr>
-
-</thead>
-
-<tbody id="leaderboardBody">
-
-</tbody>
-
-</table>
-
-<br>
-
-<button onclick="window.location.href='dashboard.html'">
-
-Dashboard
-
-</button>
-
-</div>
-
-</div>
-
-<script src="js/leaderboard.js"></script>
-<script src="js/common.js"></script>
-
+    <script src="js/common.js"></script>
+    <script src="js/leaderboard.js"></script>
 </body>
 
 </html>

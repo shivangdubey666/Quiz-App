@@ -30,4 +30,19 @@ public class ResultController {
 
     }
 
+    @GetMapping("/top5")
+    public List<Result> getTop5Performers() {
+        return resultService.getTop5Performers();
+    }
+
+    @GetMapping("/all")
+    public List<Result> getAllResults() {
+        return resultService.getAllResults();
+    }
+
+    @GetMapping("/user/{email}")
+    public List<Result> getUserResults(@PathVariable String email) {
+        return resultService.getUserResults(email);
+    }
+
 }

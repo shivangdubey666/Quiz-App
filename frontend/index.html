@@ -2,379 +2,128 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>QuizMaster</title>
-
+    <title>QuizMaster - Online Quiz & Assessment Platform</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
-
-<div class="nav-left">
-
-<a href="index.html">Home</a>
-
-<a href="#quiz">Quizzes</a>
-
-<a href="#leaderboard">Leaderboard</a>
-
-<a href="#about">About</a>
-
-</div>
-
-<div class="nav-right">
-
-<a href="login.html">Login</a>
-
-<a href="register.html">Register</a>
-
-<a href="leaderboard.html">Leaderboard</a>
-
-</div>
-
-</header>
-
-    <!-- ================= HEADER ================= -->
-
-    <header>
-
-        <div class="logo">
-
-            <i class="fa-solid fa-graduation-cap"></i>
-
-            <h2>QuizMaster</h2>
-
-        </div>
-
-        <nav>
-
-            <a href="#">Home</a>
-
-            <a href="#quiz">Quizzes</a>
-
-            <a href="#leaderboard">Leaderboard</a>
-
-            <a href="#about">About</a>
-
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-        <div class="buttons">
-
-            <a href="login.html" class="login-btn">Login</a>
-
-            <a href="register.html" class="register-btn">Register</a>
-
-        </div>
-
+        <!-- Dynamically rendered by common.js -->
     </header>
 
-
-
     <!-- ================= HERO ================= -->
-
     <section class="hero">
-
         <div class="hero-left">
-
-            <h1>Practice. Learn. Improve.</h1>
-
+            <h1>Practice. Learn. Excel.</h1>
             <p>
-
-                QuizMaster is an online quiz platform where students can purchase quizzes,
-                test their knowledge, view results, and compare scores through a leaderboard.
-
+                QuizMaster is a professional assessment platform where students can purchase specialized placement quizzes,
+                test their knowledge under timed conditions, get instant results, and compete on the global leaderboard.
             </p>
-
             <div class="hero-buttons">
-
                 <a href="register.html" class="primary-btn">Get Started</a>
-
                 <a href="#quiz" class="secondary-btn">Browse Quizzes</a>
-
             </div>
-
         </div>
-
         <div class="hero-right">
-
-            <img src="images/hero.png" alt="Quiz">
-
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop" alt="Quiz Illustration" style="border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
         </div>
-
     </section>
-
-
 
     <!-- ================= QUIZZES ================= -->
-
     <section class="quiz-section" id="quiz">
-
         <h2>Available Quizzes</h2>
-
-        <div class="quiz-container">
-
-            <div class="quiz-card">
-
-                <img src="images/java.png">
-
-                <h3>Java</h3>
-
-                <p>Core Java concepts and interview questions.</p>
-
-                <h4>₹99</h4>
-
-                <button>Buy Quiz</button>
-
+        <div class="quiz-container" id="quizContainer">
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 32px; color: #2563eb;"></i>
+                <p style="margin-top: 10px; color: #64748b;">Loading dynamic quizzes from server...</p>
             </div>
-
-            <div class="quiz-card">
-
-                <img src="images/python.png">
-
-                <h3>Python</h3>
-
-                <p>Python fundamentals with MCQ practice.</p>
-
-                <h4>₹99</h4>
-
-                <button>Buy Quiz</button>
-
-            </div>
-
-            <div class="quiz-card">
-
-                <img src="images/mysql.png">
-
-                <h3>MySQL</h3>
-
-                <p>SQL queries, joins, functions and practice.</p>
-
-                <h4>₹99</h4>
-
-                <button>Buy Quiz</button>
-
-            </div>
-
-            <div class="quiz-card">
-
-                <img src="images/spring.png">
-
-                <h3>Spring Boot</h3>
-
-                <p>Spring Boot basics and REST API quiz.</p>
-
-                <h4>₹149</h4>
-
-                <button>Buy Quiz</button>
-
-            </div>
-
-            <div class="quiz-card">
-
-                <img src="images/javascript.png">
-
-                <h3>JavaScript</h3>
-
-                <p>JavaScript concepts and coding MCQs.</p>
-
-                <h4>₹99</h4>
-
-                <button>Buy Quiz</button>
-
-            </div>
-
-            <div class="quiz-card">
-
-                <img src="images/aptitude.png">
-
-                <h3>Aptitude</h3>
-
-                <p>Quantitative aptitude practice questions.</p>
-
-                <h4>₹79</h4>
-
-                <button>Buy Quiz</button>
-
-            </div>
-
         </div>
-
     </section>
-
-
 
     <!-- ================= FEATURES ================= -->
-
     <section class="features">
-
-        <h2>Features</h2>
-
+        <h2>Why Choose QuizMaster?</h2>
         <div class="feature-container">
-
             <div class="feature-card">
-
                 <i class="fa-solid fa-credit-card"></i>
-
-                <h3>Purchase Quiz</h3>
-
-                <p>Purchase quizzes securely before attempting them.</p>
-
+                <h3>Easy Razorpay Purchase</h3>
+                <p>Purchase individual placement quizzes seamlessly with secure Razorpay checkout.</p>
             </div>
-
             <div class="feature-card">
-
                 <i class="fa-solid fa-clock"></i>
-
-                <h3>Timed Quiz</h3>
-
-                <p>Each quiz includes a countdown timer.</p>
-
+                <h3>Timed Assessments</h3>
+                <p>Each quiz comes with a dedicated countdown timer to simulate real exam environments.</p>
             </div>
-
             <div class="feature-card">
-
                 <i class="fa-solid fa-chart-column"></i>
-
-                <h3>Instant Result</h3>
-
-                <p>See your score immediately after submission.</p>
-
+                <h3>Instant Score Breakdown</h3>
+                <p>Get immediate performance evaluation, percentage analysis, and ranking after submission.</p>
             </div>
-
             <div class="feature-card">
-
                 <i class="fa-solid fa-ranking-star"></i>
-
-                <h3>Leaderboard</h3>
-
-                <p>Top scorers are displayed automatically.</p>
-
+                <h3>Dynamic Leaderboard</h3>
+                <p>Compare scores with peers and track top performers updated automatically in real time.</p>
             </div>
-
         </div>
-
     </section>
-
-
 
     <!-- ================= LEADERBOARD ================= -->
-
     <section class="leaderboard" id="leaderboard">
-
-        <h2>Top Performers</h2>
-
-        <p>
-
-            The leaderboard updates automatically after every completed quiz.
-
-        </p>
-
+        <h2>Top 5 Performers</h2>
+        <p>Top rankers across all quizzes updated dynamically after every attempt.</p>
         <table>
-
             <thead>
-
                 <tr>
-
                     <th>Rank</th>
-
                     <th>Student</th>
-
-                    <th>Quiz</th>
-
+                    <th>Quiz Name</th>
                     <th>Score</th>
-
+                    <th>Percentage</th>
                 </tr>
-
             </thead>
-
-            <tbody id="leaderboardBody">
-
+            <tbody id="topPerformersBody">
                 <tr>
-
-                    <td colspan="4">
-
-                        Loading leaderboard...
-
+                    <td colspan="5" style="text-align:center; padding:30px;">
+                        <i class="fa-solid fa-spinner fa-spin" style="color: #2563eb;"></i> Loading top performers...
                     </td>
-
                 </tr>
-
             </tbody>
-
         </table>
-
     </section>
-
-
 
     <!-- ================= ABOUT ================= -->
-
     <section class="about" id="about">
-
         <h2>About QuizMaster</h2>
-
         <p>
-
-            QuizMaster is a simple online quiz application developed using
-            HTML, CSS, JavaScript, Spring Boot and MySQL.
-
-            Students can register, purchase quizzes, attempt questions,
-            check results and view rankings.
-
+            QuizMaster is an enterprise-grade placement preparation and assessment system.
+            It provides students with curated multiple-choice quizzes across various technical domains like Java, Python,
+            MySQL, Spring Boot, Aptitude, and Web Technologies.
         </p>
-
     </section>
-
-
 
     <!-- ================= CONTACT ================= -->
-
     <section class="contact" id="contact">
-
-        <h2>Contact</h2>
-
-        <p>Email : support@quizmaster.com</p>
-
-        <p>Phone : +91 9876543210</p>
-
+        <h2>Contact & Support</h2>
+        <p><i class="fa-solid fa-envelope" style="color:#2563eb;"></i> Email: support@quizmaster.com</p>
+        <p><i class="fa-solid fa-phone" style="color:#2563eb;"></i> Phone: +91 9876543210</p>
     </section>
 
-
-
     <!-- ================= FOOTER ================= -->
-
     <footer>
-
-        <p>
-
-            © 2026 QuizMaster | Developed using HTML, CSS, JavaScript,
-            Spring Boot and MySQL.
-
-        </p>
-
+        <p>© 2026 QuizMaster | Placement Assessment Platform</p>
     </footer>
 
+    <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    
-
 </body>
 
 </html>

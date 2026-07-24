@@ -2,61 +2,72 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Add Quiz</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quiz | QuizMaster Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<div class="container">
+    <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="card">
+    <div class="container">
+        <div class="card" style="max-width: 550px; width: 100%;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <i class="fa-solid fa-folder-plus" style="font-size: 38px; color: #2563eb;"></i>
+                <h1 style="margin-top: 10px;">Create New Quiz</h1>
+                <p style="color: #64748b;">Publish a new assessment module</p>
+            </div>
 
-<h1>Create New Quiz</h1>
+            <form id="quizForm">
+                <div class="input-group">
+                    <label for="title"><i class="fa-solid fa-heading"></i> Quiz Title</label>
+                    <input type="text" id="title" placeholder="e.g. Java Core & Spring Boot Placement Assessment" required>
+                </div>
 
-<form id="quizForm">
+                <div class="input-group">
+                    <label for="description"><i class="fa-solid fa-align-left"></i> Description</label>
+                    <textarea id="description" placeholder="Short overview of topics covered..." rows="3" required></textarea>
+                </div>
 
-<input
-type="text"
-id="title"
-placeholder="Quiz Title"
-required>
+                <div class="input-group">
+                    <label for="imageUrl"><i class="fa-solid fa-image"></i> Image URL (Optional)</label>
+                    <input type="url" id="imageUrl" placeholder="https://example.com/java-quiz-banner.png">
+                </div>
 
-<input
-type="number"
-id="price"
-placeholder="Quiz Price"
-required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label for="duration"><i class="fa-solid fa-clock"></i> Duration (Mins)</label>
+                        <input type="number" id="duration" placeholder="15" value="10" min="1" required>
+                    </div>
 
-<button type="submit">
+                    <div class="input-group">
+                        <label for="price"><i class="fa-solid fa-indian-rupee-sign"></i> Price (INR)</label>
+                        <input type="number" id="price" placeholder="99" min="0" required>
+                    </div>
+                </div>
 
-Create Quiz
+                <button type="submit" id="submitBtn">
+                    <i class="fa-solid fa-check"></i> Publish Quiz
+                </button>
+            </form>
 
-</button>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="admin-dashboard.html" style="color: #64748b; text-decoration: none; font-size: 14px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Admin Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
 
-</form>
-
-<br>
-
-<button onclick="window.location.href='admin-dashboard.html'">
-
-Back
-
-</button>
-
-</div>
-
-</div>
-
-<script src="js/add-quiz.js"></script>
-<script src="js/common.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/add-quiz.js"></script>
 </body>
 
 </html>

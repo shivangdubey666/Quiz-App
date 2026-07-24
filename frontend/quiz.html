@@ -2,62 +2,55 @@
 <html lang="en">
 
 <head>
-
-    <header class="navbar">
-
-<div class="nav-left">
-
-<a href="index.html">Home</a>
-
-<a href="dashboard.html">Dashboard</a>
-
-<a href="leaderboard.html">Leaderboard</a>
-
-</div>
-
-<div class="nav-right">
-
-<a href="#" id="logoutBtn">Logout</a>
-
-</div>
-
-</header>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Quiz | QuizMaster</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment | QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-<body>
+<body style="background: #f8fafc;">
 
-<div class="container">
+    <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="card">
+    <div style="padding: 100px 8% 40px 8%; max-width: 900px; margin: auto;">
 
-<h1>Java Placement Quiz</h1>
+        <!-- Sticky Timer Header -->
+        <div class="timer-header">
+            <div>
+                <h3 id="quizHeaderTitle" style="margin: 0; font-size: 22px; color: white;">Loading Assessment...</h3>
+                <p id="questionCountBadge" style="margin: 4px 0 0 0; color: #94a3b8; font-size: 14px;">Total Questions: --</p>
+            </div>
+            <div style="text-align: right;">
+                <span style="font-size: 13px; color: #94a3b8; display: block; margin-bottom: 2px;">TIME REMAINING</span>
+                <div class="timer-box" id="timerBox">00:00</div>
+            </div>
+        </div>
 
-<div id="questionContainer"></div>
+        <!-- Questions Container -->
+        <div id="questionContainer">
+            <div style="text-align: center; padding: 60px; background: white; border-radius: 12px;">
+                <i class="fa-solid fa-spinner fa-spin" style="font-size: 36px; color: #2563eb;"></i>
+                <p style="margin-top: 15px; color: #64748b; font-size: 16px;">Preparing questions...</p>
+            </div>
+        </div>
 
-<br>
+        <!-- Submit Button Card -->
+        <div id="submitCard" style="display: none; background: white; padding: 25px; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+            <p style="color: #64748b; margin-bottom: 15px;">Review all your answers before submitting.</p>
+            <button id="submitBtn" class="primary-btn" style="width: 100%; max-width: 350px; font-size: 18px; padding: 14px;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Assessment
+            </button>
+        </div>
 
-<button id="submitBtn">
+    </div>
 
-Submit Quiz
-
-</button>
-
-</div>
-
-</div>
-
-<script src="js/quiz.js"></script>
-<script src="js/common.js"></script>
-
+    <script src="js/common.js"></script>
+    <script src="js/quiz.js"></script>
 </body>
 
 </html>

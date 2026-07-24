@@ -11,4 +11,10 @@ public interface ResultService {
 
     List<Result> leaderboard();
 
+    List<Result> getTop5Performers();
+
+    List<Result> getAllResults();
+
+    List<Result> getUserResults(String email);
+
 }

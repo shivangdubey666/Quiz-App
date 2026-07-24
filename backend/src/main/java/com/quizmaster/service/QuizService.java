@@ -15,4 +15,10 @@ public interface QuizService {
 
     List<Quiz> getAllQuiz();
 
+    Quiz getQuizById(Long id);
+
+    void deleteQuiz(Long id);
+
+    void deleteQuestion(Long questionId);
+
 }

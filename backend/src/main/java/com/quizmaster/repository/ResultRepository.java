@@ -9,4 +9,6 @@ public interface ResultRepository extends JpaRepository<Result, Long> {
 
     List<Result> findAllByOrderByPercentageDescScoreDesc();
 
+    List<Result> findByEmail(String email);
+
 }

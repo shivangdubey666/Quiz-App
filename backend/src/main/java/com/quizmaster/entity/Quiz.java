@@ -11,6 +11,12 @@ public class Quiz {
 
     private String title;
 
+    private String description;
+
+    private String imageUrl;
+
+    private int duration = 10; // in minutes
+
     private int price;
 
     public Quiz() {
@@ -30,6 +36,30 @@ public class Quiz {
 
     public void setTitle(String title) {
         this.title=title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public int getPrice() {

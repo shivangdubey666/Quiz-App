@@ -1,70 +1,71 @@
-const loginForm = document.getElementById("loginForm");
+document.addEventListener('DOMContentLoaded', () => {
+    const user = getUser();
+    if (user) {
+        if (user.role === 'ADMIN') window.location.href = 'admin-dashboard.html';
+        else window.location.href = 'dashboard.html';
+    }
 
-loginForm.addEventListener("submit", loginUser);
+    const form = document.getElementById('loginForm');
+    if (form) {
+        form.addEventListener('submit', handleLogin);
+    }
+});
 
-async function loginUser(e){
-
+async function handleLogin(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const btn = document.getElementById('submitBtn');
 
-    const password = document.getElementById("password").value.trim();
+    if (!email || !password) {
+        showToast('Please enter both email and password.', 'error');
+        return;
+    }
 
-    try{
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...';
 
-        const response = await fetch("http://localhost:8080/api/auth/login",{
-
-            method:"POST",
-
-            headers:{
-                "Content-Type":"application/json"
-            },
-
-            body:JSON.stringify({
-                email,
-                password
-            })
-
+    try {
+        const response = await fetch(`${API_BASE_URL}/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
         });
 
-        if(!response.ok){
-
-            alert("Server Error");
-
-            return;
-
+        if (!response.ok) {
+            throw new Error('Authentication endpoint returned an error.');
         }
 
         const user = await response.json();
 
-        if(user == null){
-
-            alert("Invalid Email or Password");
-
+        if (!user || !user.email) {
+            showToast('Invalid Email or Password', 'error');
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Login';
             return;
-
         }
 
-        localStorage.setItem("user",JSON.stringify(user));
+        setUser(user);
+        showToast(`Welcome back, ${user.username}!`, 'success');
 
-        if(user.role === "ADMIN"){
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirect = urlParams.get('redirect');
 
-            window.location.href = "admin-dashboard.html";
+        setTimeout(() => {
+            if (redirect) {
+                window.location.href = decodeURIComponent(redirect);
+            } else if (user.role === 'ADMIN') {
+                window.location.href = 'admin-dashboard.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
+        }, 800);
 
-        }
-        else{
-
-            window.location.href = "dashboard.html";
-
-        }
-
+    } catch (error) {
+        console.error(error);
+        showToast('Unable to connect to backend server', 'error');
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Login';
     }
-    catch(error){
-
-        console.log(error);
-
-        alert("Unable to connect to server");
-
-    }
-
 }

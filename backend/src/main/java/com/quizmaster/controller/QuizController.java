@@ -45,4 +45,21 @@ public class QuizController {
 
     }
 
+    @GetMapping("/{id}/details")
+    public Quiz getQuizDetails(@PathVariable Long id) {
+        return quizService.getQuizById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteQuiz(@PathVariable Long id) {
+        quizService.deleteQuiz(id);
+        return "Quiz Deleted Successfully";
+    }
+
+    @DeleteMapping("/question/{questionId}")
+    public String deleteQuestion(@PathVariable Long questionId) {
+        quizService.deleteQuestion(questionId);
+        return "Question Deleted Successfully";
+    }
+
 }

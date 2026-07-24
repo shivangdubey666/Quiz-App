@@ -1,112 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register | QuizMaster</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
     <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="nav-left">
+    <div class="container">
+        <div class="card" style="max-width: 500px; width: 100%;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <i class="fa-solid fa-user-plus" style="font-size: 38px; color: #2563eb;"></i>
+                <h1 style="margin-top: 10px;">Create Account</h1>
+                <p style="color: #64748b;">Join QuizMaster placement platform</p>
+            </div>
 
-<a href="index.html">Home</a>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="username"><i class="fa-solid fa-user"></i> Username (Unique)</label>
+                    <input type="text" id="username" placeholder="johndoe123" required>
+                </div>
 
-<a href="dashboard.html">Dashboard</a>
+                <div class="input-group">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" placeholder="john@college.edu" required>
+                </div>
 
-<a href="leaderboard.html">Leaderboard</a>
+                <div class="input-group">
+                    <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number</label>
+                    <input type="text" id="mobile" placeholder="9876543210" required>
+                </div>
 
-</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label for="college"><i class="fa-solid fa-building-columns"></i> College</label>
+                        <input type="text" id="college" placeholder="IIT / NIT / ABC Tech" required>
+                    </div>
 
-<div class="nav-right">
+                    <div class="input-group">
+                        <label for="branch"><i class="fa-solid fa-book"></i> Course / Branch</label>
+                        <input type="text" id="branch" placeholder="B.Tech CSE" required>
+                    </div>
+                </div>
 
-<a href="#" id="logoutBtn">Logout</a>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="input-group">
+                        <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
 
-</div>
+                    <div class="input-group">
+                        <label for="confirmPassword"><i class="fa-solid fa-check-double"></i> Confirm</label>
+                        <input type="password" id="confirmPassword" placeholder="••••••••" required>
+                    </div>
+                </div>
 
-</header>
+                <button type="submit" id="submitBtn">
+                    <i class="fa-solid fa-user-check"></i> Register Account
+                </button>
+            </form>
 
-<div class="container">
+            <p style="text-align: center; margin-top: 20px; color: #64748b;">
+                Already Registered? <a href="login.html">Login Here</a>
+            </p>
+        </div>
+    </div>
 
-<div class="card">
-
-<h1>QuizMaster</h1>
-
-<h3>Create Student Account</h3>
-
-<form id="registerForm">
-
-<input
-type="text"
-id="username"
-placeholder="Choose Username"
-required>
-
-<input
-type="email"
-id="email"
-placeholder="Email"
-required>
-
-<input
-type="text"
-id="mobile"
-placeholder="Mobile Number"
-required>
-
-<input
-type="text"
-id="college"
-placeholder="College Name"
-required>
-
-<input
-type="text"
-id="branch"
-placeholder="Course"
-required>
-
-<input
-type="password"
-id="password"
-placeholder="Password"
-required>
-
-<input
-type="password"
-id="confirmPassword"
-placeholder="Confirm Password"
-required>
-
-<button type="submit">
-
-Register
-
-</button>
-
-</form>
-
-<p>
-
-Already Registered?
-
-<a href="login.html">
-
-Login Here
-
-</a>
-
-</p>
-
-</div>
-
-</div>
-
-<script src="js/register.js"></script>
-
+    <script src="js/common.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

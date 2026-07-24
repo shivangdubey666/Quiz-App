@@ -2,89 +2,103 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<title>Add Question</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question | QuizMaster Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<div class="container">
+    <header class="navbar">
+        <!-- Rendered by common.js -->
+    </header>
 
-<div class="card">
+    <div class="container" style="align-items: flex-start; padding-top: 100px;">
+        <div style="max-width: 900px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+            
+            <!-- Left Form Card -->
+            <div class="card" style="width: 100%;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-solid fa-circle-question" style="font-size: 38px; color: #2563eb;"></i>
+                    <h1 style="margin-top: 10px;">Add Question</h1>
+                    <p style="color: #64748b;">Add MCQ to selected quiz</p>
+                </div>
 
-<h1>Add Question</h1>
+                <form id="questionForm">
+                    <div class="input-group">
+                        <label for="quizSelect"><i class="fa-solid fa-layer-group"></i> Select Target Quiz</label>
+                        <select id="quizSelect" required>
+                            <option value="">-- Loading Quizzes --</option>
+                        </select>
+                    </div>
 
-<form id="questionForm">
+                    <div class="input-group">
+                        <label for="questionText"><i class="fa-solid fa-question"></i> Question Text</label>
+                        <textarea id="questionText" placeholder="Enter question statement..." rows="3" required></textarea>
+                    </div>
 
-<input
-type="number"
-id="quizId"
-placeholder="Quiz ID"
-required>
+                    <div class="input-group">
+                        <label for="opt1">Option 1</label>
+                        <input type="text" id="opt1" placeholder="Option 1 text" required>
+                    </div>
 
-<textarea
-id="question"
-placeholder="Question"
-rows="4"
-required></textarea>
+                    <div class="input-group">
+                        <label for="opt2">Option 2</label>
+                        <input type="text" id="opt2" placeholder="Option 2 text" required>
+                    </div>
 
-<input
-type="text"
-id="option1"
-placeholder="Option 1"
-required>
+                    <div class="input-group">
+                        <label for="opt3">Option 3</label>
+                        <input type="text" id="opt3" placeholder="Option 3 text" required>
+                    </div>
 
-<input
-type="text"
-id="option2"
-placeholder="Option 2"
-required>
+                    <div class="input-group">
+                        <label for="opt4">Option 4</label>
+                        <input type="text" id="opt4" placeholder="Option 4 text" required>
+                    </div>
 
-<input
-type="text"
-id="option3"
-placeholder="Option 3"
-required>
+                    <div class="input-group">
+                        <label for="correctAnswer"><i class="fa-solid fa-circle-check"></i> Correct Answer Choice</label>
+                        <select id="correctAnswer" required>
+                            <option value="">-- Select Which Option is Correct --</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
 
-<input
-type="text"
-id="option4"
-placeholder="Option 4"
-required>
+                    <button type="submit" id="submitBtn">
+                        <i class="fa-solid fa-plus"></i> Save Question
+                    </button>
+                </form>
 
-<input
-type="text"
-id="answer"
-placeholder="Correct Answer"
-required>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="admin-dashboard.html" style="color: #64748b; text-decoration: none; font-size: 14px;">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                    </a>
+                </div>
+            </div>
 
-<button type="submit">
+            <!-- Right Question List Card -->
+            <div class="card" style="width: 100%;">
+                <h3 style="margin-top: 0; text-align: left; margin-bottom: 15px; color: #0f172a;">
+                    <i class="fa-solid fa-list-check" style="color: #2563eb;"></i> Existing Questions
+                </h3>
+                <div id="existingQuestionsList" style="max-height: 580px; overflow-y: auto;">
+                    <p style="color: #64748b;">Select a quiz to view its current questions.</p>
+                </div>
+            </div>
 
-Add Question
+        </div>
+    </div>
 
-</button>
-
-</form>
-
-<br>
-
-<button onclick="window.location.href='admin-dashboard.html'">
-
-Back
-
-</button>
-
-</div>
-
-</div>
-
-<script src="js/add-question.js"></script>
-<script src="js/common.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/add-question.js"></script>
 </body>
 
 </html>

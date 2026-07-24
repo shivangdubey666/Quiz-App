@@ -8,11 +8,13 @@ D:\quiz app\backend\src\main\java\com\quizmaster\dto\LoginRequest.java
 D:\quiz app\backend\src\main\java\com\quizmaster\dto\LoginResponse.java
 D:\quiz app\backend\src\main\java\com\quizmaster\dto\RegisterRequest.java
 D:\quiz app\backend\src\main\java\com\quizmaster\dto\SubmitQuizRequest.java
+D:\quiz app\backend\src\main\java\com\quizmaster\entity\Purchase.java
 D:\quiz app\backend\src\main\java\com\quizmaster\entity\Question.java
 D:\quiz app\backend\src\main\java\com\quizmaster\entity\Quiz.java
 D:\quiz app\backend\src\main\java\com\quizmaster\entity\Result.java
 D:\quiz app\backend\src\main\java\com\quizmaster\entity\User.java
 D:\quiz app\backend\src\main\java\com\quizmaster\QuizMasterApplication.java
+D:\quiz app\backend\src\main\java\com\quizmaster\repository\PurchaseRepository.java
 D:\quiz app\backend\src\main\java\com\quizmaster\repository\QuestionRepository.java
 D:\quiz app\backend\src\main\java\com\quizmaster\repository\QuizRepository.java
 D:\quiz app\backend\src\main\java\com\quizmaster\repository\ResultRepository.java
